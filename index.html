@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Drexora – Premium Web Development by David Chucks. Building modern business websites, church websites, portfolios, and landing pages that convert." />
+  <meta name="keywords" content="web developer, portfolio, Drexora, David Chucks, Nigeria, business websites, church websites, Firebase, GitHub Pages" />
+  <meta name="author" content="David Chucks – Drexora" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#6b21a8" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://daviddchucks-hash.github.io/Drexora-/" />
+  <meta property="og:title" content="Drexora – Premium Web Development" />
+  <meta property="og:description" content="David Chucks builds stunning websites that help businesses and churches grow their online presence." />
+  <meta property="og:image" content="assets/images/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Drexora – Premium Web Development" />
+  <meta name="twitter:description" content="David Chucks builds stunning websites for businesses, churches, and more." />
+  <meta name="twitter:image" content="assets/images/og-image.png" />
+
+  <title>Drexora – Premium Web Development | David Chucks</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== PAGE LOADER ===== -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <img src="assets/images/logo.png" alt="Drexora" class="loader-logo" />
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ===== FLOATING BUTTONS ===== -->
+  <a href="https://wa.me/2349036895700" class="float-btn float-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="float-tooltip">WhatsApp</span>
+  </a>
+  <a href="tel:+2349036895700" class="float-btn float-call" aria-label="Call David Chucks">
+    <i class="fas fa-phone"></i>
+    <span class="float-tooltip">Call Me</span>
+  </a>
+  <button id="backToTop" class="float-btn float-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header id="navbar" role="banner">
+    <nav class="nav-container" role="navigation" aria-label="Main navigation">
+      <a href="#home" class="nav-logo" aria-label="Drexora home">
+        <img src="assets/images/logo.png" alt="Drexora Logo" width="48" height="48" loading="eager" />
+        <span class="nav-brand">Drexora</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#contact" class="nav-cta-btn">Hire Me</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" hidden>
+      <ul role="list">
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+        <li><a href="#pricing" class="mobile-link">Pricing</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+        <li><a href="#contact" class="mobile-link mobile-cta">Hire Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero" aria-label="Hero section">
+      <div class="hero-particles" id="particles" aria-hidden="true"></div>
+      <div class="hero-container">
+        <div class="hero-content reveal">
+          <div class="hero-logo-wrap">
+            <img src="assets/images/logo.png" alt="Drexora Logo" class="hero-logo" width="80" height="80" loading="eager" />
+          </div>
+          <div class="hero-greeting">Hello, I'm</div>
+          <h1 class="hero-name">David Chucks</h1>
+          <h2 class="hero-tagline">I build <span id="typed" class="typed-text"></span><span class="cursor" aria-hidden="true">|</span></h2>
+          <p class="hero-intro">
+            Founder of <strong>Drexora</strong> — crafting premium websites that turn your vision into a powerful digital presence. From startups to churches, I deliver modern, fast, and stunning web experiences.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Hire Me
+            </a>
+            <a href="#portfolio" class="btn btn-secondary">
+              <i class="fas fa-eye"></i> View Projects
+            </a>
+            <a href="assets/david-chucks-cv.pdf" download class="btn btn-outline">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num counter" data-target="50">0</span><span>+</span>
+              <p>Projects</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-num counter" data-target="30">0</span><span>+</span>
+              <p>Clients</p>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-num counter" data-target="3">0</span><span>+</span>
+              <p>Years Exp.</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-photo-wrap reveal">
+          <div class="hero-photo-ring" aria-hidden="true"></div>
+          <div class="hero-photo-glow" aria-hidden="true"></div>
+          <img src="assets/images/david.webp" alt="David Chucks – Drexora founder" class="hero-photo" width="400" height="450" loading="eager" />
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Get to Know Me</span>
+          <h2 id="about-heading" class="section-title">About <span class="gradient-text">Me</span></h2>
+          <div class="title-line" aria-hidden="true"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-photo-col reveal">
+            <div class="about-photo-frame">
+              <img src="assets/images/david.webp" alt="David Chucks" class="about-photo" loading="lazy" width="380" height="430" />
+              <div class="about-badge glass-card">
+                <i class="fas fa-code"></i>
+                <span>Full-Stack Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-content-col reveal">
+            <h3 class="about-name">Hi, I'm <span class="gradient-text">David Chucks</span></h3>
+            <p class="about-text">
+              I'm a passionate web developer and the founder of <strong>Drexora</strong>, a premium web development brand dedicated to creating stunning digital experiences. Based in Nigeria, I help businesses, churches, and individuals establish powerful online presences that drive real results.
+            </p>
+            <p class="about-text">
+              With over 3 years of hands-on experience in front-end and full-stack development, I specialize in crafting responsive, performant websites using modern technologies like HTML5, CSS3, JavaScript, and Firebase. I take pride in writing clean, maintainable code that's built to last.
+            </p>
+            <p class="about-text">
+              My mission is simple: <em>deliver premium quality at affordable prices</em>. Every project I take on receives my full attention and commitment — from the first pixel to the final deployment on GitHub Pages.
+            </p>
+            <div class="about-info-grid">
+              <div class="about-info-item">
+                <i class="fas fa-user" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Name</span>
+                  <span class="info-value">David Chucks</span>
+                </div>
+              </div>
+              <div class="about-info-item">
+                <i class="fas fa-briefcase" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Brand</span>
+                  <span class="info-value">Drexora</span>
+                </div>
+              </div>
+              <div class="about-info-item">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Email</span>
+                  <a href="mailto:daviddchucks@gmail.com" class="info-value info-link">daviddchucks@gmail.com</a>
+                </div>
+              </div>
+              <div class="about-info-item">
+                <i class="fas fa-phone" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Phone</span>
+                  <a href="tel:+2349036895700" class="info-value info-link">+234 903 689 5700</a>
+                </div>
+              </div>
+              <div class="about-info-item">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Location</span>
+                  <span class="info-value">Nigeria 🇳🇬</span>
+                </div>
+              </div>
+              <div class="about-info-item">
+                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                <div>
+                  <span class="info-label">Availability</span>
+                  <span class="info-value available">Available for Projects</span>
+                </div>
+              </div>
+            </div>
+            <a href="assets/david-chucks-cv.pdf" download class="btn btn-primary" style="margin-top:1.5rem">
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section section-alt" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I Offer</span>
+          <h2 id="services-heading" class="section-title">My <span class="gradient-text">Services</span></h2>
+          <div class="title-line" aria-hidden="true"></div>
+          <p class="section-subtitle">Premium web solutions tailored to your needs</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card glass-card reveal" tabindex="0">
+            <div class="service-icon" aria-hidden="true">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3>Business Websites</h3>
+            <p>Professional, conversion-focused websites that establish credibility and drive leads for your business online.</p>
+            <div class="service-tag">Most Popular</div>
+          </article>
+          <article class="service-card glass-card reveal" tabindex="0">
+            <div class="service-icon" aria-hidden="true">
+              <i class="fas fa-church"></i>
+            </div>
+            <h3>Church Websites</h3>
+            <p>Beautiful, inspiring websites for churches and ministries — sermon archives, event calendars, giving portals, and more.</p>
+          </article>
+          <article class="service-card glass-card reveal" tabindex="0">
+            <div class="service-icon" aria-hidden="true">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <h3>Portfolio Websites</h3>
+            <p>Stunning personal portfolios that showcase your work, skills, and personality to land clients and opportunities.</p>
+          </article>
+          <article class="service-card glass-card reveal" tabindex="0">
+            <div class="service-icon" aria-hidden="true">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <h3>Landing Pages</h3>
+            <p>High-converting landing pages crafted to turn visitors into customers with compelling copy and smart design.</p>
+          </article>
+          <article class="service-card glass-card reveal" tabindex="0">
+            <div class="service-icon" aria-hidden="true">
+              <i class="fas fa-magic"></i>
+            </div>
+            <h3>Website Redesign</h3>
+            <p>Breathe new life into your outdated website with a modern redesign that improves UX, speed, and aesthetics.</p>
+          </article>
+          <article class="service-card glass-card reveal" tabindex="0">
+            <div class="service-icon" aria-hidden="true">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h3>Website Maintenance</h3>
+            <p>Ongoing support, updates, and security patches to keep your website running smoothly at peak performance.</p>
+          </article>
+          <article class="service-card glass-card reveal" tabindex="0">
+            <div class="service-icon" aria-hidden="true">
+              <i class="fas fa-fire"></i>
+            </div>
+            <h3>Firebase Integration</h3>
+            <p>Real-time databases, user authentication, cloud storage, and hosting — powered by Google's Firebase platform.</p>
+          </article>
+          <article class="service-card glass-card reveal" tabindex="0">
+            <div class="service-icon" aria-hidden="true">
+              <i class="fab fa-github"></i>
+            </div>
+            <h3>GitHub Pages Deployment</h3>
+            <p>Free, reliable website hosting on GitHub Pages — version-controlled, secure, and professionally deployed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">My Arsenal</span>
+          <h2 id="skills-heading" class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+          <div class="title-line" aria-hidden="true"></div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card glass-card reveal" tabindex="0">
+            <div class="skill-icon" style="color:#e34c26" aria-hidden="true"><i class="fab fa-html5"></i></div>
+            <h3>HTML5</h3>
+            <div class="skill-bar-wrap" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 proficiency 95%">
+              <div class="skill-bar" data-width="95"><div class="skill-fill"></div></div>
+              <span class="skill-percent">95%</span>
+            </div>
+          </div>
+          <div class="skill-card glass-card reveal" tabindex="0">
+            <div class="skill-icon" style="color:#264de4" aria-hidden="true"><i class="fab fa-css3-alt"></i></div>
+            <h3>CSS3</h3>
+            <div class="skill-bar-wrap" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 proficiency 92%">
+              <div class="skill-bar" data-width="92"><div class="skill-fill"></div></div>
+              <span class="skill-percent">92%</span>
+            </div>
+          </div>
+          <div class="skill-card glass-card reveal" tabindex="0">
+            <div class="skill-icon" style="color:#f7df1e" aria-hidden="true"><i class="fab fa-js"></i></div>
+            <h3>JavaScript</h3>
+            <div class="skill-bar-wrap" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency 85%">
+              <div class="skill-bar" data-width="85"><div class="skill-fill"></div></div>
+              <span class="skill-percent">85%</span>
+            </div>
+          </div>
+          <div class="skill-card glass-card reveal" tabindex="0">
+            <div class="skill-icon" style="color:#ff6d00" aria-hidden="true"><i class="fas fa-fire"></i></div>
+            <h3>Firebase</h3>
+            <div class="skill-bar-wrap" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Firebase proficiency 80%">
+              <div class="skill-bar" data-width="80"><div class="skill-fill"></div></div>
+              <span class="skill-percent">80%</span>
+            </div>
+          </div>
+          <div class="skill-card glass-card reveal" tabindex="0">
+            <div class="skill-icon" style="color:#f05033" aria-hidden="true"><i class="fab fa-git-alt"></i></div>
+            <h3>Git</h3>
+            <div class="skill-bar-wrap" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Git proficiency 88%">
+              <div class="skill-bar" data-width="88"><div class="skill-fill"></div></div>
+              <span class="skill-percent">88%</span>
+            </div>
+          </div>
+          <div class="skill-card glass-card reveal" tabindex="0">
+            <div class="skill-icon" style="color:#fff" aria-hidden="true"><i class="fab fa-github"></i></div>
+            <h3>GitHub</h3>
+            <div class="skill-bar-wrap" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="GitHub proficiency 90%">
+              <div class="skill-bar" data-width="90"><div class="skill-fill"></div></div>
+              <span class="skill-percent">90%</span>
+            </div>
+          </div>
+          <div class="skill-card glass-card reveal" tabindex="0">
+            <div class="skill-icon" style="color:#8b5cf6" aria-hidden="true"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Responsive Design</h3>
+            <div class="skill-bar-wrap" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" aria-label="Responsive Design proficiency 94%">
+              <div class="skill-bar" data-width="94"><div class="skill-fill"></div></div>
+              <span class="skill-percent">94%</span>
+            </div>
+          </div>
+          <div class="skill-card glass-card reveal" tabindex="0">
+            <div class="skill-icon" style="color:#a855f7" aria-hidden="true"><i class="fas fa-paint-brush"></i></div>
+            <h3>UI/UX Design</h3>
+            <div class="skill-bar-wrap" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="UI/UX proficiency 82%">
+              <div class="skill-bar" data-width="82"><div class="skill-fill"></div></div>
+              <span class="skill-percent">82%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section id="portfolio" class="section section-alt" aria-labelledby="portfolio-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">My Work</span>
+          <h2 id="portfolio-heading" class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <div class="title-line" aria-hidden="true"></div>
+          <p class="section-subtitle">A selection of projects that showcase my craftsmanship</p>
+        </div>
+        <div class="portfolio-filter reveal" role="tablist" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="business" role="tab" aria-selected="false">Business</button>
+          <button class="filter-btn" data-filter="church" role="tab" aria-selected="false">Church</button>
+          <button class="filter-btn" data-filter="portfolio" role="tab" aria-selected="false">Portfolio</button>
+          <button class="filter-btn" data-filter="landing" role="tab" aria-selected="false">Landing</button>
+        </div>
+        <div class="portfolio-grid" id="portfolioGrid">
+          <article class="portfolio-card glass-card reveal" data-category="business">
+            <div class="portfolio-img-wrap">
+              <div class="portfolio-placeholder" aria-hidden="true" style="background: linear-gradient(135deg,#6b21a8,#1e1b4b)">
+                <i class="fas fa-store"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h3>TechMart Nigeria</h3>
+                <p>E-commerce business website for a tech gadget retailer</p>
+                <div class="portfolio-tech">
+                  <span>HTML</span><span>CSS</span><span>JS</span><span>Firebase</span>
+                </div>
+                <div class="portfolio-links">
+                  <a href="#" class="btn btn-sm" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/daviddchucks-hash" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio-card glass-card reveal" data-category="church">
+            <div class="portfolio-img-wrap">
+              <div class="portfolio-placeholder" aria-hidden="true" style="background: linear-gradient(135deg,#1e3a5f,#0f766e)">
+                <i class="fas fa-church"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h3>Grace Chapel Online</h3>
+                <p>Full-featured church website with sermon archive and event calendar</p>
+                <div class="portfolio-tech">
+                  <span>HTML</span><span>CSS</span><span>JS</span><span>Firebase</span>
+                </div>
+                <div class="portfolio-links">
+                  <a href="#" class="btn btn-sm" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/daviddchucks-hash" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio-card glass-card reveal" data-category="portfolio">
+            <div class="portfolio-img-wrap">
+              <div class="portfolio-placeholder" aria-hidden="true" style="background: linear-gradient(135deg,#7c3aed,#db2777)">
+                <i class="fas fa-user-astronaut"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h3>Creative Dev Portfolio</h3>
+                <p>Animated personal portfolio with scroll effects and dark theme</p>
+                <div class="portfolio-tech">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <div class="portfolio-links">
+                  <a href="#" class="btn btn-sm" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/daviddchucks-hash" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio-card glass-card reveal" data-category="landing">
+            <div class="portfolio-img-wrap">
+              <div class="portfolio-placeholder" aria-hidden="true" style="background: linear-gradient(135deg,#065f46,#1e40af)">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h3>SaaS Launch Page</h3>
+                <p>High-converting SaaS product landing page with waitlist form</p>
+                <div class="portfolio-tech">
+                  <span>HTML</span><span>CSS</span><span>JS</span><span>Firebase</span>
+                </div>
+                <div class="portfolio-links">
+                  <a href="#" class="btn btn-sm" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/daviddchucks-hash" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio-card glass-card reveal" data-category="business">
+            <div class="portfolio-img-wrap">
+              <div class="portfolio-placeholder" aria-hidden="true" style="background: linear-gradient(135deg,#92400e,#7c2d12)">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h3>Naija Bites Restaurant</h3>
+                <p>Restaurant website with online menu and reservation system</p>
+                <div class="portfolio-tech">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <div class="portfolio-links">
+                  <a href="#" class="btn btn-sm" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/daviddchucks-hash" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio-card glass-card reveal" data-category="portfolio">
+            <div class="portfolio-img-wrap">
+              <div class="portfolio-placeholder" aria-hidden="true" style="background: linear-gradient(135deg,#0e7490,#6d28d9)">
+                <i class="fas fa-camera"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <h3>Photographer Portfolio</h3>
+                <p>Elegant photography portfolio with gallery lightbox</p>
+                <div class="portfolio-tech">
+                  <span>HTML</span><span>CSS</span><span>JS</span>
+                </div>
+                <div class="portfolio-links">
+                  <a href="#" class="btn btn-sm" target="_blank" rel="noopener">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/daviddchucks-hash" class="btn btn-sm btn-ghost" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE ME ===== -->
+    <section id="why" class="section" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">My Edge</span>
+          <h2 id="why-heading" class="section-title">Why Choose <span class="gradient-text">Drexora</span></h2>
+          <div class="title-line" aria-hidden="true"></div>
+        </div>
+        <div class="why-grid">
+          <div class="why-card glass-card reveal" tabindex="0">
+            <div class="why-icon" aria-hidden="true"><i class="fas fa-code"></i></div>
+            <h3>Clean Code</h3>
+            <p>Every project is written with semantic, maintainable code that's easy to update and scale as your business grows.</p>
+          </div>
+          <div class="why-card glass-card reveal" tabindex="0">
+            <div class="why-icon" aria-hidden="true"><i class="fas fa-palette"></i></div>
+            <h3>Modern Design</h3>
+            <p>Designs that reflect 2025 standards — bold, purposeful aesthetics that make your brand unforgettable.</p>
+          </div>
+          <div class="why-card glass-card reveal" tabindex="0">
+            <div class="why-icon" aria-hidden="true"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Mobile Responsive</h3>
+            <p>Every website is built mobile-first and looks flawless on phones, tablets, and desktops.</p>
+          </div>
+          <div class="why-card glass-card reveal" tabindex="0">
+            <div class="why-icon" aria-hidden="true"><i class="fas fa-shipping-fast"></i></div>
+            <h3>Fast Delivery</h3>
+            <p>Tight deadlines? No problem. I deliver projects on time without sacrificing quality.</p>
+          </div>
+          <div class="why-card glass-card reveal" tabindex="0">
+            <div class="why-icon" aria-hidden="true"><i class="fas fa-tags"></i></div>
+            <h3>Affordable Pricing</h3>
+            <p>Premium quality doesn't have to cost a fortune. Transparent, fair pricing for every budget.</p>
+          </div>
+          <div class="why-card glass-card reveal" tabindex="0">
+            <div class="why-icon" aria-hidden="true"><i class="fas fa-headset"></i></div>
+            <h3>Ongoing Support</h3>
+            <p>Your launch is just the beginning. I provide after-delivery support to keep your site at its best.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="testimonials" class="section section-alt" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Client Love</span>
+          <h2 id="testimonials-heading" class="section-title">What Clients <span class="gradient-text">Say</span></h2>
+          <div class="title-line" aria-hidden="true"></div>
+        </div>
+        <div class="testimonial-slider reveal" aria-label="Client testimonials">
+          <div class="testimonial-track" id="testimonialTrack">
+            <blockquote class="testimonial-card glass-card active">
+              <div class="stars" aria-label="5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"David built our church website in record time. The design is modern, sermons are easy to upload, and our congregation absolutely loves it. Highly recommended!"</p>
+              <footer class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">PO</div>
+                <div>
+                  <cite class="author-name">Pastor Oluwaseun</cite>
+                  <span class="author-role">Senior Pastor, Grace Chapel</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card glass-card">
+              <div class="stars" aria-label="5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"Drexora redesigned our business website and sales went up 40% in the first month. The landing page converts so well. David truly understands how to build for results."</p>
+              <footer class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">CA</div>
+                <div>
+                  <cite class="author-name">Chioma Adaeze</cite>
+                  <span class="author-role">CEO, AdaChic Fashion House</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card glass-card">
+              <div class="stars" aria-label="5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"My portfolio website looks absolutely stunning. David gave me exactly what I envisioned — and then some. I've already gotten two job offers through it!"</p>
+              <footer class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">EU</div>
+                <div>
+                  <cite class="author-name">Emeka Ugwu</cite>
+                  <span class="author-role">Software Engineer &amp; Freelancer</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card glass-card">
+              <div class="stars" aria-label="5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p>"Professional, responsive, and incredibly talented. Drexora delivered our restaurant site on time and within budget. Customers can now make reservations online easily."</p>
+              <footer class="testimonial-author">
+                <div class="author-avatar" aria-hidden="true">AO</div>
+                <div>
+                  <cite class="author-name">Amaka Okonkwo</cite>
+                  <span class="author-role">Owner, Naija Bites Restaurant</span>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="testimonial-controls">
+            <button class="testi-btn" id="testiPrev" aria-label="Previous testimonial">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="testi-dots" id="testiDots" aria-label="Testimonial navigation"></div>
+            <button class="testi-btn" id="testiNext" aria-label="Next testimonial">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section id="pricing" class="section" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Investment</span>
+          <h2 id="pricing-heading" class="section-title">Pricing <span class="gradient-text">Plans</span></h2>
+          <div class="title-line" aria-hidden="true"></div>
+          <p class="section-subtitle">Transparent, flexible packages for every budget</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card glass-card reveal" tabindex="0">
+            <div class="pricing-badge basic">Starter</div>
+            <h3 class="plan-name">Basic</h3>
+            <div class="plan-price">
+              <span class="currency">₦</span>
+              <span class="amount">30,000</span>
+            </div>
+            <p class="plan-desc">Perfect for individuals and small projects</p>
+            <ul class="plan-features" role="list">
+              <li><i class="fas fa-check" aria-hidden="true"></i> 1–3 Page Website</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Mobile Responsive</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Basic SEO Setup</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Contact Form</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> GitHub Pages Hosting</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> 7-Day Delivery</li>
+              <li class="unavailable"><i class="fas fa-times" aria-hidden="true"></i> Firebase Integration</li>
+              <li class="unavailable"><i class="fas fa-times" aria-hidden="true"></i> Custom Animations</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-full">Get Started</a>
+          </div>
+          <div class="pricing-card glass-card featured reveal" tabindex="0">
+            <div class="pricing-badge pro">Most Popular</div>
+            <div class="pricing-glow" aria-hidden="true"></div>
+            <h3 class="plan-name">Professional</h3>
+            <div class="plan-price">
+              <span class="currency">₦</span>
+              <span class="amount">75,000</span>
+            </div>
+            <p class="plan-desc">Best for growing businesses and brands</p>
+            <ul class="plan-features" role="list">
+              <li><i class="fas fa-check" aria-hidden="true"></i> 5–7 Page Website</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Mobile Responsive</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Full SEO Optimization</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Contact &amp; Quote Forms</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> GitHub Pages Hosting</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> 14-Day Delivery</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Firebase Integration</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Scroll Animations</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+          </div>
+          <div class="pricing-card glass-card reveal" tabindex="0">
+            <div class="pricing-badge premium">Premium</div>
+            <h3 class="plan-name">Premium</h3>
+            <div class="plan-price">
+              <span class="currency">₦</span>
+              <span class="amount">150,000</span>
+            </div>
+            <p class="plan-desc">Full-scale solution for enterprises</p>
+            <ul class="plan-features" role="list">
+              <li><i class="fas fa-check" aria-hidden="true"></i> Unlimited Pages</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Mobile Responsive</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Advanced SEO + Analytics</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> All Form Types</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Custom Domain + Hosting</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Priority 7-Day Delivery</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Full Firebase Suite</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> Premium Animations</li>
+              <li><i class="fas fa-check" aria-hidden="true"></i> 3 Months Maintenance</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-full">Get Started</a>
+          </div>
+        </div>
+        <p class="pricing-note reveal">All prices are in Nigerian Naira. <a href="https://wa.me/2349036895700" target="_blank" rel="noopener">Contact me</a> for custom quotes.</p>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="section section-alt" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Questions?</span>
+          <h2 id="faq-heading" class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+          <div class="title-line" aria-hidden="true"></div>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item reveal" role="region">
+            <button class="faq-question" aria-expanded="false">
+              How long does it take to build a website?
+              <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Timeline depends on the scope. A basic website takes 5–7 days, a professional site takes 10–14 days, and a premium project may take 2–4 weeks. I always confirm the timeline before we begin.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal" role="region">
+            <button class="faq-question" aria-expanded="false">
+              Do I need to pay upfront?
+              <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Yes, a 50% deposit is required to begin work, with the remaining 50% due upon delivery. For smaller projects, full payment may be required upfront. I accept bank transfers and mobile money.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal" role="region">
+            <button class="faq-question" aria-expanded="false">
+              Will my website be mobile-friendly?
+              <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Absolutely! Every website I build is fully mobile-responsive by default. It will look great on smartphones, tablets, and desktops of any screen size.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal" role="region">
+            <button class="faq-question" aria-expanded="false">
+              What is GitHub Pages hosting?
+              <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>GitHub Pages is a free, reliable web hosting service provided by GitHub. I deploy your website directly from a GitHub repository — it's secure, fast via CDN, and perfect for static websites.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal" role="region">
+            <button class="faq-question" aria-expanded="false">
+              Can I update my website content after delivery?
+              <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Yes! I write clean, well-commented code so you (or any developer) can easily make updates. I also offer ongoing maintenance packages to handle updates for you.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal" role="region">
+            <button class="faq-question" aria-expanded="false">
+              Do you provide a custom domain?
+              <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Domain registration is not included by default but can be arranged. I'll guide you through purchasing your preferred domain and connecting it to your website seamlessly.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal" role="region">
+            <button class="faq-question" aria-expanded="false">
+              What happens if I'm not satisfied with the result?
+              <i class="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Client satisfaction is my priority. I offer up to 3 rounds of revisions at no extra cost. We'll work together until you're 100% happy with the final result.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Get In Touch</span>
+          <h2 id="contact-heading" class="section-title">Let's <span class="gradient-text">Work Together</span></h2>
+          <div class="title-line" aria-hidden="true"></div>
+          <p class="section-subtitle">Ready to build something amazing? Reach out and let's talk!</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3>Contact Information</h3>
+            <div class="contact-items">
+              <a href="tel:+2349036895700" class="contact-item glass-card">
+                <div class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
+                <div>
+                  <span class="contact-label">Phone</span>
+                  <span class="contact-value">+234 903 689 5700</span>
+                </div>
+              </a>
+              <a href="mailto:daviddchucks@gmail.com" class="contact-item glass-card">
+                <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">daviddchucks@gmail.com</span>
+                </div>
+              </a>
+              <div class="contact-item glass-card">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Nigeria 🇳🇬</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://wa.me/2349036895700" class="btn btn-whatsapp" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <a href="tel:+2349036895700" class="btn btn-call">
+              <i class="fas fa-phone"></i> Call Me Now
+            </a>
+            <div class="contact-social">
+              <a href="https://github.com/daviddchucks-hash" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="contact-form-wrap reveal">
+            <form id="contactForm" class="contact-form glass-card" novalidate aria-label="Contact form">
+              <h3>Send a Message</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="firstName" name="firstName" required placeholder="David" autocomplete="given-name" />
+                  <span class="form-error" role="alert" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="lastName" name="lastName" required placeholder="Chucks" autocomplete="family-name" />
+                  <span class="form-error" role="alert" aria-live="polite"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+234 000 000 0000" autocomplete="tel" />
+              </div>
+              <div class="form-group">
+                <label for="service">Service Needed <span aria-hidden="true">*</span></label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="business">Business Website</option>
+                  <option value="church">Church Website</option>
+                  <option value="portfolio">Portfolio Website</option>
+                  <option value="landing">Landing Page</option>
+                  <option value="redesign">Website Redesign</option>
+                  <option value="maintenance">Website Maintenance</option>
+                  <option value="firebase">Firebase Integration</option>
+                  <option value="github">GitHub Pages Deployment</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="budget">Budget Range</label>
+                <select id="budget" name="budget">
+                  <option value="" disabled selected>Select budget range</option>
+                  <option value="basic">Under ₦30,000 (Basic)</option>
+                  <option value="professional">₦30,000 – ₦100,000 (Professional)</option>
+                  <option value="premium">₦100,000+ (Premium)</option>
+                  <option value="discuss">Prefer to discuss</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" required rows="5" placeholder="Tell me about your project..."></textarea>
+                <span class="form-error" role="alert" aria-live="polite"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+              <div id="formFeedback" class="form-feedback" aria-live="polite" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#home" aria-label="Drexora home">
+              <img src="assets/images/logo.png" alt="Drexora Logo" width="56" height="56" loading="lazy" />
+              <span>Drexora</span>
+            </a>
+            <p>Building premium digital experiences that drive real-world results. Your success is my mission.</p>
+            <div class="footer-social">
+              <a href="https://github.com/daviddchucks-hash" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-links-col">
+            <h4>Quick Links</h4>
+            <ul role="list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Services</h4>
+            <ul role="list">
+              <li><a href="#services">Business Websites</a></li>
+              <li><a href="#services">Church Websites</a></li>
+              <li><a href="#services">Portfolio Sites</a></li>
+              <li><a href="#services">Landing Pages</a></li>
+              <li><a href="#services">Website Redesign</a></li>
+              <li><a href="#services">Firebase Integration</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact-col">
+            <h4>Contact</h4>
+            <ul role="list">
+              <li><a href="tel:+2349036895700"><i class="fas fa-phone" aria-hidden="true"></i> +234 903 689 5700</a></li>
+              <li><a href="mailto:daviddchucks@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> daviddchucks@gmail.com</a></li>
+              <li><span><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Nigeria 🇳🇬</span></li>
+              <li><a href="https://wa.me/2349036895700" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="footerYear"></span> Drexora. All rights reserved.</p>
+        <p>Designed &amp; Developed by <strong>Drexora</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

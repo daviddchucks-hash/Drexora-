@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>404 – Page Not Found | Drexora</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #8b21e6;
+      --primary-light: #a855f7;
+      --accent: #06b6d4;
+      --bg: #070712;
+      --text: #f0eeff;
+      --text-muted: #6b6490;
+    }
+    body {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+    .bg-glow {
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(139,33,230,0.2), transparent 70%);
+      pointer-events: none;
+    }
+    .logo-wrap { margin-bottom: 2rem; }
+    .logo-wrap img {
+      width: 72px; height: 72px;
+      object-fit: contain;
+      animation: float 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 20px rgba(139,33,230,0.7));
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .error-code {
+      font-size: clamp(6rem, 20vw, 12rem);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, #a855f7, #c026d3, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #8b21e6, #c026d3);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(139,33,230,0.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(139,33,230,0.6); }
+    .btn-outline {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text);
+    }
+    .btn-outline:hover { border-color: var(--primary-light); color: var(--primary-light); }
+    .footer-note {
+      position: absolute;
+      bottom: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .footer-note a { color: var(--primary-light); text-decoration: none; }
+    .footer-note a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="logo-wrap">
+    <a href="index.html" aria-label="Drexora home">
+      <img src="assets/images/logo.png" alt="Drexora Logo" />
+    </a>
+  </div>
+  <div class="error-code" aria-label="Error 404">404</div>
+  <h1>Page Not Found</h1>
+  <p>Oops! The page you're looking for has vanished into the digital void. It might have been moved, deleted, or never existed.</p>
+  <div class="btn-group">
+    <a href="index.html" class="btn btn-primary">
+      <i class="fas fa-home"></i> Back to Home
+    </a>
+    <a href="index.html#contact" class="btn btn-outline">
+      <i class="fas fa-envelope"></i> Contact Me
+    </a>
+  </div>
+  <p class="footer-note">
+    &copy; <span id="yr"></span> <a href="index.html">Drexora</a> — Designed &amp; Developed by David Chucks
+  </p>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
