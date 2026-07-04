@@ -1157,6 +1157,15 @@ footer { background: #04040e; border-top: 1px solid var(--glass-border); }
 .footer-bottom p { font-size: 0.82rem; color: var(--text-muted); }
 .footer-bottom strong { color: var(--primary-light); }
 
+/* ===== PORTFOLIO MOBILE ACTIVE STATE ===== */
+/* Toggled by JS on touch devices so overlay is visible without hover */
+.portfolio-card.mobile-active .portfolio-overlay {
+  opacity: 1;
+}
+.portfolio-card.mobile-active .portfolio-placeholder {
+  transform: scale(1.05);
+}
+
 /* ===== REVEAL ANIMATIONS ===== */
 .reveal {
   opacity: 0;
