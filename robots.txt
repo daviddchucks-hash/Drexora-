@@ -1,4 +1,6 @@
+
 User-agent: *
+
 Allow: /
 
-Sitemap: https://daviddchucks-hash.github.io/Drexora-/sitemap.xml
+Sitemap: https://drexxora.name.ng/sitemap.xml
