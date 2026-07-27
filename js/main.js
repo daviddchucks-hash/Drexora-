@@ -1,7 +1,7 @@
 /**
  * DREXORA PORTFOLIO – main.js
  * Clean, modular, well-commented Vanilla JavaScript
- * Author: David Chucks | Drexora
+ * Product: Drexora digital experiences
  */
 
 'use strict';
@@ -509,12 +509,12 @@
 
       // Success
       showFeedback(
-        '✅ Message sent successfully! I\'ll get back to you within 24 hours.',
+        'Message sent successfully! The Drexora team will get back to you within 24 hours.',
         'success'
       );
       form.reset();
     } catch (err) {
-      showFeedback('❌ Something went wrong. Please email me directly at daviddchucks@gmail.com', 'error');
+      showFeedback('Something went wrong. Please use the customer-care WhatsApp button or try again.', 'error');
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
@@ -640,5 +640,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mark body as JS-loaded for progressive enhancement
   document.body.classList.add('js-loaded');
   console.log('%cDrexora Portfolio Loaded ✅', 'color:#a855f7;font-weight:bold;font-size:14px');
-  console.log('%cBuilt by David Chucks | Drexora', 'color:#06b6d4;font-size:11px');
+  console.log('%cDrexora digital experiences', 'color:#06b6d4;font-size:11px');
 });

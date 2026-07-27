@@ -1,6 +1,6 @@
 # Drexora Portfolio Website
 
-> Premium personal portfolio website for David Chucks | Drexora Web Development
+> Premium digital agency website for Drexora Web Development
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-8b21e6?style=for-the-badge)](https://daviddchucks-hash.github.io/Drexora-/)
 [![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-24292e?style=for-the-badge&logo=github)](https://daviddchucks-hash.github.io/Drexora-/)
@@ -36,7 +36,7 @@ Drexora-/
 └── assets/
     ├── images/
     │   ├── logo.png    # Drexora logo
-    │   └── david.webp  # Professional photo
+    │   └── david.webp  # Customer care profile image
     └── icons/          # Any additional icons
 ```
 
@@ -59,7 +59,7 @@ Drexora-/
 ## 📞 Contact
 
 - **Phone/WhatsApp:** [+234 903 689 5700](https://wa.me/2349036895700)
-- **Email:** [daviddchucks@gmail.com](mailto:daviddchucks@gmail.com)
+- **Customer care:** Use the contact form or WhatsApp button on the website
 - **GitHub:** [@daviddchucks-hash](https://github.com/daviddchucks-hash)
 
 ## 🛠️ Technologies
