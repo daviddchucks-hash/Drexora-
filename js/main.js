@@ -634,6 +634,42 @@
 })();
 
 /* ============================================================
+   21. DARK MODE TOGGLE
+   ============================================================ */
+(function initThemeToggle() {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+
+  const html = document.documentElement;
+  const icon = btn.querySelector('i');
+
+  // Apply saved preference immediately (before paint) — also handled
+  // inline in <head> if needed, but localStorage read here is fast enough.
+  const saved = localStorage.getItem('drexora-theme');
+  if (saved === 'dark') {
+    html.setAttribute('data-theme', 'dark');
+    if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+    btn.setAttribute('aria-label', 'Switch to light mode');
+  }
+
+  btn.addEventListener('click', () => {
+    const isDark = html.getAttribute('data-theme') === 'dark';
+
+    if (isDark) {
+      html.removeAttribute('data-theme');
+      if (icon) { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
+      btn.setAttribute('aria-label', 'Switch to dark mode');
+      localStorage.setItem('drexora-theme', 'light');
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+      btn.setAttribute('aria-label', 'Switch to light mode');
+      localStorage.setItem('drexora-theme', 'dark');
+    }
+  });
+})();
+
+/* ============================================================
    INIT COMPLETE
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
