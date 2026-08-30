@@ -257,48 +257,6 @@
   skillBars.forEach(bar => observer.observe(bar));
 })();
 
-/* ============================================================
-   10. PORTFOLIO FILTER
-   ============================================================ */
-(function initPortfolioFilter() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.portfolio-card');
-
-  if (!filterBtns.length) return;
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Update active state
-      filterBtns.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-
-      const filter = btn.dataset.filter;
-
-      cards.forEach(card => {
-        const category = card.dataset.category;
-        const show = filter === 'all' || category === filter;
-
-        card.style.transition = 'opacity 0.35s, transform 0.35s';
-
-        if (show) {
-          card.classList.remove('hidden');
-          requestAnimationFrame(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          });
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(20px)';
-          setTimeout(() => card.classList.add('hidden'), 350);
-        }
-      });
-    });
-  });
-})();
 
 /* ============================================================
    11. TESTIMONIAL SLIDER
@@ -551,19 +509,6 @@
   });
 })();
 
-/* ============================================================
-   19. PORTFOLIO CARD ACCESSIBILITY (mobile reveal)
-   ============================================================ */
-(function initPortfolioCards() {
-  // On touch devices, toggle overlay with tap
-  if (!window.matchMedia('(hover: none)').matches) return;
-
-  document.querySelectorAll('.portfolio-card').forEach(card => {
-    card.addEventListener('click', () => {
-      card.classList.toggle('mobile-active');
-    });
-  });
-})();
 
 /* ============================================================
    20. PERFORMANCE: Throttle scroll events
