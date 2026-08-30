@@ -7,25 +7,6 @@
 'use strict';
 
 /* ============================================================
-   1. PAGE LOADER
-   ============================================================ */
-(function initLoader() {
-  const loader = document.getElementById('loader');
-  if (!loader) return;
-
-  // Hide loader once page is fully loaded
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      loader.classList.add('hidden');
-      document.body.style.overflow = '';
-    }, 1800); // slight delay to let progress bar finish
-  });
-
-  // Fallback: hide after 3s regardless
-  setTimeout(() => loader.classList.add('hidden'), 3000);
-})();
-
-/* ============================================================
    2. NAVBAR – sticky + active link highlighting
    ============================================================ */
 (function initNavbar() {
@@ -122,7 +103,13 @@
       if (!target) return;
 
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 72;
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: Math.max(0, targetPosition),
+        behavior: 'smooth'
+      });
     });
   });
 })();
@@ -177,43 +164,6 @@
   setTimeout(type, 800);
 })();
 
-/* ============================================================
-   6. PARTICLE BACKGROUND (Hero)
-   ============================================================ */
-(function initParticles() {
-  const container = document.getElementById('particles');
-  if (!container) return;
-
-  // Respect reduced-motion preference
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  const count = window.innerWidth < 768 ? 15 : 30;
-
-  for (let i = 0; i < count; i++) {
-    createParticle(container);
-  }
-
-  function createParticle(parent) {
-    const p = document.createElement('div');
-    p.classList.add('particle');
-
-    const size = Math.random() * 4 + 1;
-    const left = Math.random() * 100;
-    const duration = Math.random() * 15 + 10;
-    const delay = Math.random() * 10;
-
-    p.style.cssText = `
-      width: ${size}px;
-      height: ${size}px;
-      left: ${left}%;
-      animation-duration: ${duration}s;
-      animation-delay: ${delay}s;
-      opacity: ${Math.random() * 0.5 + 0.1};
-    `;
-
-    parent.appendChild(p);
-  }
-})();
 
 /* ============================================================
    7. SCROLL REVEAL ANIMATIONS
@@ -633,41 +583,6 @@
   }, { passive: true });
 })();
 
-/* ============================================================
-   21. DARK MODE TOGGLE
-   ============================================================ */
-(function initThemeToggle() {
-  const btn = document.getElementById('themeToggle');
-  if (!btn) return;
-
-  const html = document.documentElement;
-  const icon = btn.querySelector('i');
-
-  // Apply saved preference immediately (before paint) — also handled
-  // inline in <head> if needed, but localStorage read here is fast enough.
-  const saved = localStorage.getItem('drexora-theme');
-  if (saved === 'dark') {
-    html.setAttribute('data-theme', 'dark');
-    if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
-    btn.setAttribute('aria-label', 'Switch to light mode');
-  }
-
-  btn.addEventListener('click', () => {
-    const isDark = html.getAttribute('data-theme') === 'dark';
-
-    if (isDark) {
-      html.removeAttribute('data-theme');
-      if (icon) { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
-      btn.setAttribute('aria-label', 'Switch to dark mode');
-      localStorage.setItem('drexora-theme', 'light');
-    } else {
-      html.setAttribute('data-theme', 'dark');
-      if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
-      btn.setAttribute('aria-label', 'Switch to light mode');
-      localStorage.setItem('drexora-theme', 'dark');
-    }
-  });
-})();
 
 /* ============================================================
    INIT COMPLETE
